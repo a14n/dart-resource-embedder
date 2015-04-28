@@ -18,6 +18,7 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart' show CryptoUtils;
 
+/// A metadata annotation to indicate what resource to embed.
 class Resources {
   /// The path where the resource files are.
   final String path;
@@ -30,14 +31,17 @@ class Resources {
       {this.ignore, this.recursive: true, this.followLinks: true});
 }
 
+/// The resource corresponding to a file.
 class Resource {
   final String path;
   final String contentInBase64;
 
   const Resource(this.path, this.contentInBase64);
 
+  /// Read the entire file contents as a list of bytes.
   List<int> readAsBytes() => CryptoUtils.base64StringToBytes(contentInBase64);
 
+  /// Read the entire file contents as a string using the given [Encoding].
   String readAsString({Encoding encoding: UTF8}) =>
       encoding.decode(readAsBytes());
 }
