@@ -1,4 +1,4 @@
-# Dart Resource Embedder
+# Resource Embedder
 
 [![Build Status](https://travis-ci.org/a14n/dart-resource-embedder.svg?branch=master)](https://travis-ci.org/a14n/dart-resource-embedder)
 
