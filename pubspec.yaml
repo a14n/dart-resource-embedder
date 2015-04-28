@@ -1,8 +1,10 @@
 name: resource_embedder
-version: 0.0.1-dev
+version: 0.0.1
 author: Alexandre Ardhuin <alexandre.ardhuin@gmail.com>
 description: A package to embed and expose files
 homepage: https://github.com/a14n/dart-resource-embedder
+environment:
+  sdk: ">=1.8.0 <2.0.0"
 dependencies:
   crypto: ^0.9.0
   source_gen: ^0.4.0
